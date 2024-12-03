@@ -73,14 +73,33 @@
                 width: 29.25%;
             }
 
-            .leftsection, .rightsection {
-		align-items: center;
-                margin: 150px;
-                padding: 100px;
-                display: flex;
-                justify-content: space-between;
-                color: white;
-            }
+            /* Global Styles for Flexbox Container */
+.leftsection, .rightsection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 2rem; /* Using rem for better scalability */
+    margin: 2rem auto; /* Margin adjusted for better layout */
+    max-width: 1200px; /* Limit the width for better control */
+    width: 100%;
+}
+
+/* Responsive Design: Adjustments for smaller screen sizes */
+@media (max-width: 1024px) {
+    .leftsection, .rightsection {
+        flex-direction: column; /* Stack content on smaller screens */
+        padding: 1.5rem;
+        margin: 1rem; /* Reduces margins on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .leftsection, .rightsection {
+        padding: 1rem; /* Further reduce padding for very small screens */
+    }
+}
+
 
             .rightsection {
                 display: flex;
