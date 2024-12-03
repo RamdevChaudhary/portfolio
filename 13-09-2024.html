@@ -174,7 +174,7 @@
         // Function to display comments, sorted by most liked
         function displayComments() {
             const commentsContainer = document.getElementById("commentsContainer");
-            commentsContainer.innerHTML = ''; // Clear previous comments
+          //  commentsContainer.innerHTML = ''; // Clear previous comments
             comments.sort((a, b) => b.likes - a.likes); // Sort by likes
 
             comments.forEach((comment, index) => {
