@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
 <HTML lang="en">
-
 <HEAD>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
     <style>
+        /* Existing CSS */
+
         * {
             margin: 0;
             padding: 0;
@@ -21,148 +22,51 @@
             background-color: rgb(0, 0, 69);
             color: white;
             font-family: doto;
+        }
 
-           /* Navigation Bar Styling */
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: white;
-    z-index: 1000;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 80px;
-    background-color: rgb(0, 0, 169);
-}
+        /* Navigation and other existing styles... */
 
-/* Navigation List Styling */
-nav ul {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
+        /* Treasure Map Manifesto Section */
+        .manifesto {
+            background: url('parchment-texture.jpg'); /* Replace with your parchment texture */
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 30px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            box-shadow: 0 0 30px gold;
+            animation: glow 2s infinite alternate;
+            color: gold;
+            font-family: 'Cormorant Garamond', serif;
+        }
 
-/* List Items */
-nav ul li {
-    list-style: none;
-    font-size: large;
-    margin: 0 23px;
-}
+        .manifesto h1, .manifesto p {
+            text-shadow: 0 0 10px rgba(255, 223, 0, 0.8), 0 0 20px rgba(255, 223, 0, 0.6);
+        }
 
-/* Links Styling */
-nav ul li a {
-    text-decoration: none;
-    color: inherit;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease;
-}
+        .manifesto h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-/* Active Link Styling */
-nav ul li a.active {
-    background-color: rgb(0, 0, 255);  /* Highlight active link */
-    border-radius: 5px;
-}
+        .manifesto p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
 
-/* Responsive Design: Mobile Navigation */
-@media (max-width: 768px) {
-    nav {
-        justify-content: space-between;
-        padding: 10px;
-    }
-
-    nav ul {
-        display: none;  /* Hide menu items on small screens */
-        flex-direction: column;
-        width: 100%;
-        background-color: rgb(0, 0, 169);
-    }
-
-    nav ul li {
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    nav.active ul {
-        display: flex;  /* Show menu when the nav is active */
-    }
-}
-
-
-            .left {
-                font-size: 1.75rem;
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px gold;
             }
-
-            .right {
-                font-size: 1.75rem;
+            to {
+                box-shadow: 0 0 40px gold;
             }
+        }
 
-            .FirstSection {
-                padding-top: 150px;
-                display: flex;
-                justify-content: space-around;
-                margin: 23px 0;
-            }
-
-            .FirstSection div {
-                width: 29.25%;
-            }
-
-           
-.leftsection, .rightsection {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    padding: 2rem; 
-    margin: 2rem auto;
-    max-width: 1200px; 
-    width: 100%;
-}
-
-
-@media (max-width: 1024px) {
-    .leftsection, .rightsection {
-        flex-direction: column; 
-        padding: 1.5rem;
-        margin: 1rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .leftsection, .rightsection {
-        padding: 1rem; 
-    }
-}
-
-
-            .rightsection {
-                display: flex;
-                justify-content: center;
-            }
-
-            img {
-                border-radius: 50%;
-            }
-
-            .button {
-                justify-content: bottom;
-                display: inline-block;
-                color: white;
-                background-color: rgb(0, 0, 69);
-            }
     </style>
-    <script>
-function download() {
-    const link = document.createElement("a");
-    link.href = "resume.jpeg";
-    link.download = "ramdev.jpg";
-    link.click();
-}
-</script>
 </HEAD>
 
 <BODY>
@@ -182,11 +86,9 @@ function download() {
         </nav>
     </header>
 
-    <div class="hamburger-menu" id="hamburger-menu">
-	<a class="hamburger" aria-controls="site-navigation" aria-expanded="false"></a>
-</div>
-
     <main>
+        <!-- Existing Sections -->
+
         <section class="FirstSection">
             <div class="leftsection">
                 <br>&nbsp;Hi, My name is Ramdev and I am a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hacker.
@@ -200,8 +102,22 @@ function download() {
                 <img src="ramo.jpg" height="450px" width="450px">
             </div>
         </section>
+
+        <!-- Manifesto Section -->
+        <section>
+            <div class="manifesto">
+                <h1>My Hacker's Manifesto</h1>
+                <p>Hacking is not just a skill for me; it’s a reflection of my journey, my passion, and the way I see the world...</p>
+		<p>I hack because I’ve always questioned the limits placed before me. At 8 years old, I received my first computer—a blank canvas waiting to be explored. My brother, a hacker himself, introduced me to a world where the rules weren’t fixed, where curiosity could break barriers, and where learning had no bounds.</p>
+                <p>The first glimpse of hacking’s true power came when I saw my brother's friend playing a modded version of Mini Militia. The game no longer played by its rules—he defined the rules. That moment wasn’t just about breaking a game; it was about realizing that systems—digital or otherwise—are only as unbreakable as the minds testing them.</p>
+		<p>But hacking is more than rebellion. My brother held me back, insisting I wasn’t ready, not until I understood the ethics and responsibility it demanded. That lesson has stayed with me: hacking without purpose is just chaos, but hacking with understanding is evolution.</p>
+		<p>The digital realm has shaped my life in profound ways, not all of them positive. I watched someone I loved be consumed by the algorithms of social media, trapped in a bubble of ideals crafted by invisible hands. It showed me the darker side of this world—a side I vowed to confront. To hack is to question, to uncover, and to reclaim control.</p>
+		<p>Hacking is my language, my way of challenging systems, and my way of shaping a future where technology empowers rather than enslaves. Computers have always been my sanctuary, my passion, my weapon of choice in a world where knowledge is power.</p>
+		<p>I am a hacker, and this is my manifesto.</p>
+            </div>
+        </section>
+
     </main>
 
 </BODY>
-
 </HTML>
