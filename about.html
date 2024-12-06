@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<HTML lang="en">
+<HEAD>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <TITLE>MR.RAMDEV</TITLE>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin-bottom: 100px;
+            height: 100vh;
+            background-color: rgb(0, 0, 69);
+            color: white;
+            font-family: doto;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: white;
+            z-index: 1000;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(0, 0, 169);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            list-style: none;
+            font-size: large;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: inherit;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a.active {
+            background-color: rgb(0, 0, 255);
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgb(0, 0, 169);
+            }
+
+            nav ul li {
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            nav.active ul {
+                display: flex;
+            }
+        }
+
+        /* Treasure Map Manifesto Section */
+        .manifesto {
+            background: url('https://i.imgur.com/JzXkAHL.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 30px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            box-shadow: 0 0 30px gold;
+            animation: glow 2s infinite alternate;
+            color: gold;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .manifesto h1, .manifesto p {
+            text-shadow: 0 0 10px rgba(255, 223, 0, 0.8), 0 0 20px rgba(255, 223, 0, 0.6);
+        }
+
+        .manifesto h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .manifesto p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px gold;
+            }
+            to {
+                box-shadow: 0 0 40px gold;
+            }
+        }
+
+        /* Dark Terminal Section */
+        .terminal {
+            background-color: black;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+
+        .typing {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #00ff00;
+            padding-right: 10px;
+            animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+    </style>
+</HEAD>
+
+<BODY>
+    <header>
+        <nav>
+            <div class="left">
+                <h1>RAMO</h1>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><b>Home</b></li>
+                    <li>About</li>
+                    <li><a href="13-09-2024.html">Blog</a></li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Existing Sections -->
+
+        <section class="FirstSection">
+            <div class="leftsection">
+                <br>&nbsp;Hi, My name is Ramdev and I am a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hacker.
+                <br><br>--------------------------------------
+                <br><br>&nbsp;+ Information Technology Student at &nbsp;&nbsp;&nbsp;Ramanand Arya D.A.V. College
+                <br><br>&nbsp;+ Tele Service Executive at Walkin &nbsp;&nbsp;&nbsp;Global Services
+                <br><br>--------------------------------------
+                <br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button"><button onclick="download()">Download My Resume</button></a>
+            </div>
+            <div class="rightsection">
+                <img src="ramo.jpg" height="450px" width="450px">
+            </div>
+        </section>
+
+        <!-- Manifesto Section -->
+        <section>
+            <div class="manifesto">
+                <h1>My Hacker's Manifesto</h1>
+                <p>Hacking is not just a skill for me; it’s a reflection of my journey, my passion, and the way I see the world...</p>
+                <p>I am a hacker, and this is my manifesto.</p>
+            </div>
+        </section>
+
+        <!-- Dark Terminal Section -->
+        <section>
+            <div class="terminal">
+                <div class="typing">
+                    + Information Technology Student at Ramanand Arya D.A.V. College<br>
+                    + Tele Service Executive at Walkin Global Services<br>
+                    + Pursuing my passion for hacking<br>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</BODY>
+</HTML>
