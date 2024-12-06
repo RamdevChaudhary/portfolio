@@ -139,14 +139,45 @@
             font-size: 1.2rem;
         }
 
-        .typing {
-            display: inline-block;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 3px solid #00ff00;
-            padding-right: 10px;
-            animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
-        }
+      .typing {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #00ff00;
+    padding-right: 10px;
+    animation: typing 2s steps(50) 1s forwards, blink 0.75s step-end infinite;
+}
+
+.typing-line {
+    display: block;
+    animation: typingLine 1s steps(50) 1s forwards;
+    opacity: 0;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes typingLine {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
 
         @keyframes typing {
             from {
@@ -183,38 +214,13 @@
     </header>
 
     <main>
-        <!-- Existing Sections -->
-
-        <section class="FirstSection">
-            <div class="leftsection">
-                <br>&nbsp;Hi, My name is Ramdev and I am a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hacker.
-                <br><br>--------------------------------------
-                <br><br>&nbsp;+ Information Technology Student at &nbsp;&nbsp;&nbsp;Ramanand Arya D.A.V. College
-                <br><br>&nbsp;+ Tele Service Executive at Walkin &nbsp;&nbsp;&nbsp;Global Services
-                <br><br>--------------------------------------
-                <br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button"><button onclick="download()">Download My Resume</button></a>
-            </div>
-            <div class="rightsection">
-                <img src="ramo.jpg" height="450px" width="450px">
-            </div>
-        </section>
-
-        <!-- Manifesto Section -->
-        <section>
-            <div class="manifesto">
-                <h1>My Hacker's Manifesto</h1>
-                <p>Hacking is not just a skill for me; it’s a reflection of my journey, my passion, and the way I see the world...</p>
-                <p>I am a hacker, and this is my manifesto.</p>
-            </div>
-        </section>
-
         <!-- Dark Terminal Section -->
         <section>
             <div class="terminal">
                 <div class="typing">
-                    + Information Technology Student at Ramanand Arya D.A.V. College<br>
-                    + Tele Service Executive at Walkin Global Services<br>
-                    + Pursuing my passion for hacking<br>
+                    <div class="typing-line">+ Information Technology Student at Ramanand Arya D.A.V. College<br></div>
+                    <div class="typing-line">+ Tele Service Executive at Walkin Global Services<br></div>
+                    <div class="typing-line">+ Pursuing my passion for hacking<br></div>
                 </div>
             </div>
         </section>
