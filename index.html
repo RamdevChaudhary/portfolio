@@ -3,246 +3,165 @@
 <HEAD>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-    <TITLE>MR.RAMDEV</TITLE>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <TITLE>MR. RAMDEV</TITLE>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
     <style>
-        /* Existing CSS */
-
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
+        /* Body Styling */
         body {
-            margin-bottom: 100px;
-            height: 100vh;
             background-color: rgb(0, 0, 69);
             color: white;
-            font-family: doto;
+            font-family: 'Doto', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Navigation and other existing styles... */
-
-        /* Treasure Map Manifesto Section */
-        .manifesto {
-            background: url('parchment-texture.jpg'); /* Replace with your parchment texture */
-            background-size: cover;
-            background-repeat: no-repeat;
-            padding: 30px;
-            border-radius: 15px;
-            width: 80%;
-            max-width: 800px;
-            margin: 50px auto;
-            box-shadow: 0 0 30px gold;
-            animation: glow 2s infinite alternate;
-            color: gold;
-            font-family: 'Cormorant Garamond', serif;
-            font-family: "Merienda", cursive; 
-            font-optical-sizing: auto;
-           font-weight: 400;
-           font-style: normal;
+        /* Navigation Bar */
+        nav {
+            width: 100%;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(0, 0, 169);
         }
 
-        .manifesto h1, .manifesto p {
-            text-shadow: 0 0 10px rgba(255, 223, 0, 0.8), 0 0 20px rgba(255, 223, 0, 0.6);
-	    color: black;
+        nav ul {
+            display: flex;
+            list-style: none;
         }
 
-        .manifesto h1 {
-            font-size: 3rem;
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgb(0, 0, 255);
+            border-radius: 5px;
+        }
+
+        /* Main Content Section */
+        .main-content {
+            padding: 20px;
             text-align: center;
+        }
+
+        .intro {
             margin-bottom: 20px;
         }
 
-        .manifesto p {
+        .intro img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .intro h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
             font-size: 1.2rem;
-            line-height: 1.8;
+            line-height: 1.5;
         }
 
-        @keyframes glow {
-            from {
-                box-shadow: 0 0 10px gold;
-            }
-            to {
-                box-shadow: 0 0 40px gold;
+        .resume-button {
+            margin-top: 20px;
+        }
+
+        .resume-button button {
+            background-color: rgb(0, 0, 169);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .resume-button button:hover {
+            background-color: rgb(0, 0, 255);
+        }
+
+        /* Manifesto Section */
+        .manifesto {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(0, 0, 100, 0.5);
+            border-radius: 10px;
+        }
+
+        .manifesto h2 {
+            font-family: 'Merienda', cursive;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(255, 223, 0, 0.8);
+        }
+
+        .manifesto p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .manifesto {
+                margin-top: 20px;
             }
         }
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: white;
-    z-index: 1000;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 80px;
-    background-color: rgb(0, 0, 169);
-}
-
-/* Navigation List Styling */
-nav ul {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-/* List Items */
-nav ul li {
-    list-style: none;
-    font-size: large;
-    margin: 0 23px;
-}
-
-/* Links Styling */
-nav ul li a {
-    text-decoration: none;
-    color: inherit;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease;
-}
-
-/* Active Link Styling */
-nav ul li a.active {
-    background-color: rgb(0, 0, 255);  /* Highlight active link */
-    border-radius: 5px;
-}
-
-/* Responsive Design: Mobile Navigation */
-@media (max-width: 768px) {
-    nav {
-        justify-content: space-between;
-        padding: 10px;
-    }
-
-    nav ul {
-        display: none;  /* Hide menu items on small screens */
-        flex-direction: column;
-        width: 100%;
-        background-color: rgb(0, 0, 169);
-    }
-
-    nav ul li {
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    nav.active ul {
-        display: flex;  /* Show menu when the nav is active */
-    }
-}
-
-
-            .left {
-                font-size: 1.75rem;
-            }
-
-            .right {
-                font-size: 1.75rem;
-            }
-
-            .FirstSection {
-                padding-top: 150px;
-                display: flex;
-                justify-content: space-around;
-                margin: 23px 0;
-            }
-
-            .FirstSection div {
-                width: 29.25%;
-            }
-
-           
-.leftsection, .rightsection {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    padding: 2rem; 
-    margin: 2rem auto;
-    max-width: 1200px; 
-    width: 100%;
-}
-
-
-@media (max-width: 1024px) {
-    .leftsection, .rightsection {
-        flex-direction: column; 
-        padding: 1.5rem;
-        margin: 1rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .leftsection, .rightsection {
-        padding: 1rem; 
-    }
-}
-
-
-            .rightsection {
-                display: flex;
-                justify-content: center;
-            }
-
-            img {
-                border-radius: 50%;
-            }
-
-            .button {
-                justify-content: bottom;
-                display: inline-block;
-                color: white;
-                background-color: rgb(0, 0, 69);
-            }
     </style>
     <script>
-function download() {
-    const link = document.createElement("a");
-    link.href = "resume.jpeg";
-    link.download = "ramdev.jpg";
-    link.click();
-}
-</script>
+        function download() {
+            const link = document.createElement("a");
+            link.href = "resume.jpeg"; /* Replace with your actual file path */
+            link.download = "ramdev-resume.jpeg";
+            link.click();
+        }
+    </script>
 </HEAD>
-
 <BODY>
-    <header>
-        <nav>
-            <div class="left">
-                <h1>RAMO</h1>
-            </div>
-            <div class="right">
-                <ul>
-                    <li><b>Home</b></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="13-09-2024.html">Blog</a></li>
-                    <li>Contact</li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <nav>
+        <div><h1>RAMO</h1></div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-    <main>
-        <!-- Existing Sections -->
-
-        <section class="FirstSection">
-            <div class="leftsection">
-                <br>&nbsp;Hi, My name is Ramdev and I am a &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hacker.
-                <br><br>--------------------------------------
-                <br><br>&nbsp;+ Information Technology Student at &nbsp;&nbsp;&nbsp;Ramanand Arya D.A.V. College
-                <br><br>&nbsp;+ Tele Service Executive at Walkin &nbsp;&nbsp;&nbsp;Global Services
-                <br><br>--------------------------------------
-                <br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button"><button onclick="download()">Download My Resume</button></a>
-            </div>
-            <div class="rightsection">
-                <img src="ramo.jpg" height="450px" width="450px">
+    <div class="main-content">
+        <section class="intro">
+            <img src="your-image.jpg" alt="Your Photo">
+            <h1>Hello, I'm Ramdev</h1>
+            <p>
+                + Ethical Hacker at Indian Institute of Technology Kharagpur<br>
+                + Information Technology Student at Ramanand Arya D.A.V. College<br>
+                + Tele Service Executive at Walkin Global Services
+            </p>
+            <div class="resume-button">
+                <button onclick="download()">Download My Resume</button>
             </div>
         </section>
 
@@ -259,8 +178,7 @@ function download() {
 		<p>I am a hacker, and this is my manifesto.</p>
             </div>
         </section>
-
-    </main>
-
+        
+    </div>
 </BODY>
 </HTML>
